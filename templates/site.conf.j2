@@ -1,0 +1,26 @@
+RF:
+{ 
+  GSM:
+  {
+    CenterFreq  = {{ pillar['ogn']['centerfreq'] }};
+    Gain        = {{ pillar['ogn']['gain'] }};
+  };
+};
+
+Position:
+{
+  Latitude   =   {{ pillar['ogn']['latitude'] }};
+  Longitude  =   {{ pillar['ogn']['longitude'] }};
+  Altitude   =   {{ pillar['ogn']['altitude'] }};
+  GeoidSepar =   {{ pillar['ogn']['geoidsepar'] }};
+};
+
+APRS:
+{
+  Call = "{{ pillar['ogn']['callsign'] }}";
+};
+
+DDB:
+{
+  UseAsWhitelist = {{ pillar['ogn']['usewhitelist'] }};
+};
